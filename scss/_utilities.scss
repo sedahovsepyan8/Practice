@@ -1,0 +1,91 @@
+// Buttons
+.btn {
+  &-search {
+    @include bordered($colorOrange, 0, 0 3px 3px 0);
+  }
+  &-small {
+    @include bordered($btnborder, 2px, 3px);
+    padding: 0.4rem 0.5rem;
+  }
+  &-gray {
+    @include bordered($transparent, 2px, 5px);
+  }
+  &-lightGray {
+    @include bordered($transparent, 2px, 5px);
+  }
+
+  &-cancel {
+    @include bordered($btnborder, 2px, 3px);
+    width: 12rem;
+  }
+  &-pay {
+    @include bordered($colorOrange, 2px, 3px);
+    width: 15rem;
+  }
+  &-user {
+    @include bordered($btnborder, 2px, 3px);
+  }
+}
+
+// Backgrounds
+.bg {
+  &-main {
+    @include backgroundColor($darkGray, $colorWhite);
+  }
+  &-dark {
+    @include backgroundColor($greyMid, $colorWhite);
+  }
+  &-lightMid {
+    @include backgroundColor($whiteGrey, $darkGray);
+  }
+  &-light {
+    @include backgroundColor($lightGray, $colorWhite);
+  }
+  &-medium {
+    @include backgroundColor($ligthWhiteGrey, $colorWhite);
+  }
+  &-transparent {
+    @include backgroundColor($transparent, $colorWhite);
+  }
+  &-orange {
+    @include backgroundColor($colorOrange, $colorWhite);
+  }
+}
+
+// Padding
+.py {
+  &-1 {
+    padding: 1rem;
+  }
+  &-05 {
+    padding: 0.5rem;
+  }
+}
+
+// font-size
+.fn {
+  &-3 {
+    font-size: 3rem;
+  }
+  &-2 {
+    font-size: 2rem;
+  }
+  &-1 {
+    font-size: 1rem;
+  }
+  &-08 {
+    font-size: 0.8rem;
+  }
+  &-06 {
+    font-size: 0.6rem;
+  }
+}
+// margin
+.m {
+  &-5 {
+    margin: 5px;
+  }
+  &-0 {
+    margin: 0;
+  }
+}

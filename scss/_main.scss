@@ -1,0 +1,99 @@
+@import "config";
+@import "utilities";
+@import "item-grid";
+@import "flex";
+
+// general style
+ul li {
+  list-style: none;
+}
+ul {
+  margin-block-start: 0;
+  margin-block-end: 0;
+  padding-inline-start: 0;
+}
+a {
+  text-decoration: none;
+}
+body {
+  margin: 0;
+}
+button:focus {
+  outline: -webkit-focus-ring-color auto 0;
+}
+input {
+  border-width: 0;
+}
+
+// item styles
+.item-foot {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 7%;
+  padding-bottom: 15px;
+}
+.item-head {
+  height: 7%;
+}
+.item-menu {
+  font-weight: bold;
+  align-items: center;
+  height: 40px;
+}
+.item-right {
+  border-left: 5px solid $darkGray;
+  margin-top: -5px;
+  height: calc(100vh - 20%);
+}
+
+.form-control {
+  width: 18rem;
+}
+.btn-group {
+  grid-gap: 8px 16px;
+}
+
+// tab
+
+#ActionMenu p {
+  color: $colorOrange;
+}
+.tab {
+  overflow: hidden;
+}
+
+#ActionMenu {
+  display: block;
+}
+.tabcontent {
+  display: none;
+
+  ul {
+    padding-inline-start: 0;
+    li {
+      color: $contentColor;
+      font-weight: bold;
+      border-bottom: 1px solid $ligthWhiteGrey;
+    }
+  }
+}
+
+.tab button.active,
+.tab button:hover {
+  border-top-right-radius: 3px;
+  border-top-left-radius: 3px;
+  border-top: 5px solid $colorOrange;
+  background: $colorWhite;
+  color: $darkGray;
+}
+.tab button {
+  background-color: inherit;
+  float: left;
+  border: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  font-weight: bold;
+  color: #fff;
+  border-top: 5px solid $greyMid;
+}

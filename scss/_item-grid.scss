@@ -1,0 +1,48 @@
+.grid-container {
+  display: grid;
+  grid-template-areas:
+    "header header  header header"
+    "main main main  right"
+    "footer footer  footer footer";
+}
+.item {
+  &-head {
+    grid-area: header;
+  }
+  &-menu {
+    grid-area: main;
+  }
+  &-right {
+    grid-area: right;
+  }
+  &-foot {
+    grid-area: footer;
+  }
+}
+// grid columns and row span
+
+.total {
+  @include grid-row-col(5, 1 / span 2);
+}
+.user {
+  @include grid-row-col(1, 1 / span 2);
+}
+.btns {
+  @include grid-row-col(6, 1 / span 2);
+}
+
+// grid columns
+
+.item-foot {
+  @include grid-col(3.2rem auto auto auto auto auto);
+}
+.item-menu {
+  @include grid-col(42% auto);
+}
+
+.item-menu ul {
+  @include grid-col(auto auto auto);
+}
+.btn-group {
+  @include grid-col(auto auto);
+}

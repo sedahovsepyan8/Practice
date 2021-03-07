@@ -1,0 +1,29 @@
+$colorWhite: #fff;
+$whiteGrey: #e8e8e8;
+$ligthWhiteGrey: #ececec;
+$darkGray: #40454a;
+$btnborder: #737c86;
+$colorOrange: #ec8b2e;
+$itemHover: #4377ab;
+$greyMid: #4e555b;
+$contentColor: #696969;
+$lightGray: #878b8f;
+$transparent: transparent;
+
+@mixin bordered($color, $width, $radius) {
+  border: $width solid $color;
+  border-radius: $radius;
+}
+@mixin grid-col($cols) {
+  display: grid;
+  grid-template-columns: $cols;
+}
+@mixin grid-row-col($col, $row) {
+  grid-column: $col;
+  grid-row: $row;
+}
+
+@mixin backgroundColor($background, $color) {
+  background: $background;
+  color: $color;
+}

@@ -1,0 +1,33 @@
+%flex-share {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.navbar {
+  @extend %flex-share;
+  flex-wrap: wrap;
+}
+.form-search {
+  @extend %flex-share;
+  flex-grow: 8;
+}
+
+.nav-item {
+  @extend %flex-share;
+  flex-grow: 1;
+  flex-wrap: wrap;
+  li {
+    a {
+      color: $colorWhite;
+    }
+    &:hover {
+      background: $itemHover;
+      border-radius: 25px;
+    }
+  }
+}
+
+.total {
+  @extend %flex-share;
+}

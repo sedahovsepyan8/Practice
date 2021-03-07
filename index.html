@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
+      integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w=="
+      crossorigin="anonymous"
+    />
+    <script src="script.js" defer></script>
+    <title>Example</title>
+  </head>
+  <body>
+    <div class="grid-container">
+      <!-- header -->
+      <header class="item-head">
+        <nav class="navbar bg-main py-1">
+          <form class="form-inline form-search">
+            <input
+              class="form-control py-05"
+              type="search"
+              placeholder="SKU,UPS,Item Name, ID, Alternative IDs"
+              aria-label="Search"
+            />
+            <button class="btn-search bg-orange py-05" type="submit">
+              <i class="fas fa-search"></i>
+            </button>
+          </form>
+          <ul class="nav-item py-05">
+            <li class="py-05">
+              <a href="#"><i class="fas fa-cash-register"></i> REG_A</a>
+            </li>
+            <li class="py-05">
+              <a href="#"><i class="fas fa-database"></i> Sales</a>
+            </li>
+            <li class="py-05">
+              <a href="#"><i class="fas fa-paste"></i> Orders</a>
+            </li>
+            <li class="py-05"><a href="#"><i class="fas fa-laptop-house"></i> Back Office</a></li>
+          </ul>
+          <form class="form-inline form-user">
+            <button class="btn-user bg-transparent py-05" type="submit"><i class="fas fa-user"></i> Le User</button>
+            <button class="btn-user bg-transparent py-05" type="submit"><i class="fas fa-question-circle"></i></button>
+          </form>
+        </nav>
+      </header>
+      <!-- menu  -->
+      <section class="item-menu bg-lightMid">
+        <form>
+          <input type="checkbox" id="name" name="ProductName" value="" />
+          <label for="name"> Product Name</label>
+        </form>
+        <ul>
+          <li>Qty.</li>
+          <li>Price</li>
+          <li>Total</li>
+        </ul>
+      </section>
+      <!-- right side/ tabs -->
+      <aside class="item-right">
+        <div class="tab bg-dark">
+          <button
+            class="tablinks active"
+            onclick="openTab(event, 'ActionMenu')"
+          >
+            Action Menu
+          </button>
+          <button class="tablinks" onclick="openTab(event, 'QuickPick')">
+            Quick Pick
+          </button>
+          <button class="tablinks" onclick="openTab(event, 'ItemView')">
+            Item View
+          </button>
+        </div>
+
+        <!-- Tab content -->
+        <div id="ActionMenu" class="tabcontent py-1">
+          <p> <i class="fas fa-money-check"></i> Transaction</p>
+          <div class="btn-group bg-medium py-05">
+            <button type="button" class="btn-lightGray bg-light py-05">
+              Return transaction
+            </button>
+            <button type="button" class="btn-lightGray bg-light py-05">
+              Hold transaction
+            </button>
+            <button type="button" class="btn-lightGray bg-light py-05">
+              Discount transaction
+            </button>
+            <button type="button" class="btn-gray bg-dark py-05">Sell Gift Cards</button>
+            <button type="button" class="btn-gray bg-dark py-05">Set Salesperson</button>
+            <button type="button" class="btn-gray bg-dark py-05">Transaction Note</button>
+          </div>
+          <div>
+            <ul>
+              <li> <i class="fas fa-shopping-basket py-1"></i> Items</li>
+              <li><i class="fas fa-user py-1"></i> Customer</li>
+              <li><i class="fas fa-cash-register py-1"></i> Register</li>
+            </ul>
+          </div>
+
+          <div id="QuickPick" class="tabcontent">
+            <h3>Quick Pick</h3>
+          </div>
+
+          <div id="ItemView" class="tabcontent">
+            <h3>Item View</h3>
+          </div>
+        </div>
+      </aside>
+      <!-- footer -->
+      <footer class="item-foot bg-dark py-05">
+        <div class="user fn-2 py-05"><i class="fas fa-user"></i></div>
+        <div class="fn-08">Walk in</div>
+
+        <div class="fn-08">Discounts</div>
+        <div class="fn-08">0.00</div>
+
+        <div class="total fn-1"><span>Total</span> <b class="fn-3">&nbsp;$0.00</b></div>
+        <div>
+          <button type="button" class="btn-small  bg-transparent"><i class="fas fa-plus fn-06"></i> <span class="fn-06"> New</span></button>
+          <button type="button" class="btn-small  bg-transparent"><i class="fas fa-search fn-06"></i> <span class="fn-06"> Find</span></button>
+        </div>
+        <div class="fn-08">Taxes</div>
+        <div class="fn-08">0.00</div>
+        <form class="btns">
+          <button type="button" class="btn-cancel py-1 fn-1 bg-transparent"><b> <i class="fas fa-ban"></i> Cancel</b></button>
+          <button type="button" class="btn-pay py-1 fn-1 bg-orange"><b>$ Pay</b></button>
+        </form>
+      </footer>
+    </div>
+  </body>
+</html>
